@@ -4,8 +4,55 @@
   padding: 28px 25px;
 }
 
+.nav-toggle {
+  position: relative;
+  width: 25px;
+  height: 11px;
+  background-color: @basic_blue_dark;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.nav-toggle::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 25px;
+  height: 3px;
+  background-color: @basic_white;
+  border-radius: 2px;
+}
+
+.nav-toggle::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 25px;
+  height: 3px;
+  background-color: @basic_white;
+  border-radius: 2px;
+}
+
+.main-nav__wrapper .user-nav__list {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.user-list__item .user-list__link--tel,
+.user-list__item .user-list__link--email {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
 .main-nav__popup {
-  // display: none;
+  display: none;
   background-color: @basic_white;
 }
 
@@ -16,6 +63,7 @@
 }
 
 .site-list {
+  padding: 28px 0 51px;
   font-size: 30px;
   font-weight: 500;
   line-height: 35px;
@@ -23,9 +71,14 @@
 }
 
 .user-list {
+  padding: 0 25px;
   font-size: 16px;
   line-height: 18px;
-  text-align: left;
+  text-transform: uppercase;
+}
+
+.user-list__login {
+  margin-bottom: 51px;
 }
 
 .social-list {
