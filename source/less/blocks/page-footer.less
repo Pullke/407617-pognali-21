@@ -1,24 +1,19 @@
 .page-footer {
+  z-index: 2;
+  position: relative;
+  top: -80px;
+  width: 100%;
   background-color: @basic_white;
-  border-radius: 10px 10px 0 0;
+  border-radius: 20px 20px 0 0;
 }
 
 .page-footer__wrapper {
-  padding: 0 25px;
+  padding: 37px 25px;
   text-align: center;
 }
 
-.copyright {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 25px;
-  padding: 13px 25px;
-  border-top: 1px solid @basic_blue_light;
-}
-
-.copyright__text {
-  font-weight: 400;
-  line-height: 16px;
+.social-list {
+  margin-top: 40px;
 }
 
 .social-list__item {
@@ -44,4 +39,17 @@
   background-image: url("../img/icon_instagram.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 25px;
+  padding: 13px 25px;
+  border-top: 1px solid @basic_blue_light;
+}
+
+.copyright__text {
+  font-weight: 400;
+  line-height: 16px;
 }

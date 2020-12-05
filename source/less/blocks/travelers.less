@@ -1,4 +1,5 @@
 .travelers {
+  z-index: -2;
   margin: 35px 0 0;
   padding: 13px 25px;
   color: @basic_white;
@@ -6,7 +7,6 @@
   background-image: url("../img/travelers_back.png");
   background-repeat: no-repeat;
   background-position: top left;
-  // background-size: contain;
   border-radius: 0 0 20px 20px;
 }
 
@@ -162,22 +162,13 @@
 }
 
 .button-to-all {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 20px auto;
+  text-align: left;
   padding: 1.15em;
+  background-image: url("../img/polygon.svg");
+  background-position: right 22px center;
+  background-repeat: no-repeat;
   border-radius: 10px;
   text-transform: none;
-}
-
-.button-to-all::after {
-  display: inline;
-  content: "";
-  width: 13px;
-  height: 13px;
-  background-image: url("../img/polygon.svg");
-  background-repeat: no-repeat;
 }
 
 .ways-list__button {
