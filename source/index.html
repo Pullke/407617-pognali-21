@@ -178,7 +178,7 @@
               </div>
             </li>
           </ul>
-          <a class="direction__to-all button link" href="">Показать все</a>
+          <a class="direction__to-all button-to-all button link" href="">Показать все</a>
         </section>
 
 <!-- Travelers -->
@@ -190,97 +190,102 @@
             <p class="travelers__appeal">Теперь можно легко найти единомышленников!</p>
           </div>
           <ul class="travelers__list list">
-            <li class="travelers__item">
-              <div class="travelers__progressbar progressbar">
-                <span class="progressbar__status-number">99</span>
-                <span class="progressbar__status-level">level</span>
-              </div>
-              <img class="travelers__image image" src="img/firsova-mobile.jpg" width="270" height="270" alt="Девушка в купальнике лежит на воде">
-              <ul class="travelers__flags list flags">
-                <li class="flags__item flags__item--sri-lanka">
-                  <img class="flags__image image" src="http://placehold.it/35x25" width="35" height="25" alt="Флаг республики Шри-Ланка">
-                </li>
-                <li class="flags__item flags__item--thailand">
-                  <img class="flags__image image" src="http://placehold.it/35x25" width="35" height="25" alt="Флаг королевства Тайланд">
-                </li>
-                <li class="flags__item flags__item--seychelles">
-                  <img class="flags__image image" src="http://placehold.it/35x25" width="35" height="25" alt="Флаг республики Сейшельские Острова">
-                </li>
-              </ul>
-              <div class="travelers__item-box item-box">
-                <a class="item-box__link-profile link-profile link" href="">
-                  <span class="link-profile__name">Таня Фирсова</span>
-                </a>
-                <p class="item-box__hashtag">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-                <ul class="item-box__ways list ways ways-list">
-                  <li class="ways-list__item ways-list__item--air">
-                    <button class="ways-list__button ways-button ways-button--active" type="button">
-                      <span class="ways-button__text visually-hidden">Авиаперелёт</span>
-                    </button>
+            <li class="travelers__item travelers-item">
+              <article class="travelers-item__content profile-firsova">
+                <div class="travelers-item__progressbar progressbar">
+                  <span class="progressbar__status-number">99</span>
+                  <span class="progressbar__status-level">level</span>
+                </div>
+                <img class="travelers-item__image image" src="img/firsova-mobile.jpg" width="270" height="270" alt="Девушка в купальнике лежит на воде">
+                <ul class="travelers-item__flag flag-list list">
+                  <li class="flag-list__item flag-list__item--sri-lanka">
+                    <span class="flag-list__text visually-hidden">Шри-Ланка</span>
                   </li>
-                  <li class="ways-list__item ways-list__item--vehicles">
-                    <button class="ways-list__button ways-button" type="button">
-                      <span class="ways-button__text visually-hidden">Автотранспорт</span>
-                    </button>
+                  <li class="flag-list__item flag-list__item--thailand">
+                    <span class="flag-list__text visually-hidden">Тайланд</span>
                   </li>
-                  <li class="ways-list__item ways-list__item--bycicle">
-                    <button class="ways-list__button ways-button" type="button">
-                      <span class="ways-button__text visually-hidden">Велотранспорт</span>
-                    </button>
-                  </li>
-                  <li class="ways-list__item ways-list__item--foot">
-                    <button class="ways-list__button ways-button" type="button">
-                      <span class="ways-button__text visually-hidden">Пешком</span>
-                    </button>
+                  <li class="flag-list__item flag-list__item--seychelles">
+                    <span class="flag-list__text visually-hidden">Сейшеллы</span>
                   </li>
                 </ul>
-              </div>
+                <div class="travelers-item__box travelers-item-box">
+                  <a class="travelers-item-box__link-profile link-profile link" href="profile-firsova.html">
+                    <span class="link-profile__name link-profile__name--offline">Таня Фирсова</span>
+                  </a>
+                  <p class="travelers-item-box__hashtag">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+                  <ul class="travelers-item-box__ways list ways ways-list">
+                    <li class="ways-list__item ways-list__item--plane">
+                      <button class="ways-list__button ways-button ways-button__plane ways-button--active" type="button">
+                        <span class="ways-button__text visually-hidden">Авиаперелёт</span>
+                      </button>
+                    </li>
+                    <li class="ways-list__item ways-list__item--bus">
+                      <button class="ways-list__button ways-button ways-button__bus" type="button">
+                        <span class="ways-button__text visually-hidden">Автотранспорт</span>
+                      </button>
+                    </li>
+                    <li class="ways-list__item ways-list__item--bycicle">
+                      <button class="ways-list__button ways-button ways-button__bycicle" type="button">
+                        <span class="ways-button__text visually-hidden">Велотранспорт</span>
+                      </button>
+                    </li>
+                    <li class="ways-list__item ways-list__item--run">
+                      <button class="ways-list__button ways-button ways-button__run" type="button">
+                        <span class="ways-button__text visually-hidden">Пешком</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </article>
             </li>
-            <li class="travelers__item">
-              <div class="travelers__progressbar progressbar">
-                <span class="progressbar__status-number">80</span> <br>
-                <span class="progressbar__status-level">level</span>
-              </div>
-              <img class="travelers__image image" src="img/demin-mobile.jpg" width="270" height="270" alt="Молодой человек в тёмных очках">
-              <ul class="travelers__flags list flags">
-                <li class="flags__item flags__item--belgium">
-                  <img class="flags__image image" src="http://placehold.it/35x25" width="35" height="25" alt="Флаг Бельгии">
-                </li>
-                <li class="flags__item flags__item--czech">
-                  <img class="flags__image image" src="http://placehold.it/35x25" width="35" height="25" alt="Флаг Чехии">
-                </li>
-              </ul>
-              <div class="travelers__item-box item-box">
-                <a class="item-box__link-profile link-profile link" href="">
-                  <span class="link-profile__name">Петя Демин</span>
-                </a>
-                <p class="item-box__hashtag">#бургер #бар #футбол #концерт #крафт</p>
-                <ul class="item-box__ways list ways ways-list">
-                  <li class="ways-list__item ways-list__item--air">
-                    <button class="ways-list__button ways-button ways-button--active" type="button">
-                      <span class="ways-button__text visually-hidden">Авиаперелёт</span>
-                    </button>
+
+            <li class="travelers__item travelers-item">
+              <article class="travelers-item__content profile-demin">
+                <div class="travelers-item__progressbar progressbar">
+                  <span class="progressbar__status-number">80</span>
+                  <span class="progressbar__status-level">level</span>
+                </div>
+                <img class="travelers-item__image image" src="img/demin-mobile.jpg" width="270" height="270" alt="Молодой человек в тёмных очках">
+                <ul class="travelers-item__flag flag-list list">
+                  <li class="flag-list__item flag-list__item--belgium">
+                    <span class="flag-list__text visually-hidden">Бельгия</span>
                   </li>
-                  <li class="ways-list__item ways-list__item--vehicles">
-                    <button class="ways-list__button ways-button ways-button--active" type="button">
-                      <span class="ways-button__text visually-hidden">Автотранспорт</span>
-                    </button>
-                  </li>
-                  <li class="ways-list__item ways-list__item--bycicle">
-                    <button class="ways-list__button ways-button" type="button">
-                      <span class="ways-button__text visually-hidden">Велотранспорт</span>
-                    </button>
-                  </li>
-                  <li class="ways-list__item ways-list__item--foot">
-                    <button class="ways-list__button ways-button ways-button--active" type="button">
-                      <span class="ways-button__text visually-hidden">Пешком</span>
-                    </button>
+                  <li class="flag-list__item flag-list__item--czech">
+                    <span class="flag-list__text visually-hidden">Чехия</span>
                   </li>
                 </ul>
-              </div>
+                <div class="travelers-item__box travelers-item-box">
+                  <a class="travelers-item-box__link-profile link-profile link" href="profile-demin.html">
+                    <span class="link-profile__name link-profile__name--online">Петя Демин</span>
+                  </a>
+                  <p class="travelers-item-box__hashtag">#бургер #бар #футбол #концерт #крафт</p>
+                  <ul class="travelers-item-box__ways list ways ways-list">
+                    <li class="ways-list__item ways-list__item--plane">
+                      <button class="ways-list__button ways-button ways-button__plane ways-button--active" type="button">
+                        <span class="ways-button__text visually-hidden">Авиаперелёт</span>
+                      </button>
+                    </li>
+                    <li class="ways-list__item ways-list__item--bus">
+                      <button class="ways-list__button ways-button ways-button__bus ways-button--active" type="button">
+                        <span class="ways-button__text visually-hidden">Автотранспорт</span>
+                      </button>
+                    </li>
+                    <li class="ways-list__item ways-list__item--bycicle">
+                      <button class="ways-list__button ways-button ways-button__bycicle" type="button">
+                        <span class="ways-button__text visually-hidden">Велотранспорт</span>
+                      </button>
+                    </li>
+                    <li class="ways-list__item ways-list__item--run">
+                      <button class="ways-list__button ways-button ways-button__run ways-button--active" type="button">
+                        <span class="ways-button__text visually-hidden">Пешком</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </article>
             </li>
           </ul>
-          <a class="travelers__to-all button link" href="catalog.html">Показать всех</a>
+          <a class="travelers-item__to-all button-to-all button link" href="catalog.html">Показать всех</a>
         </section>
 
 <!-- Tariff -->

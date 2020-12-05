@@ -1,11 +1,22 @@
 .travelers {
-  margin: 0;
-  padding: 0 25px;
+  margin: 35px 0 0;
+  padding: 13px 25px;
   color: @basic_white;
+  background-color: @basic_blue_dark;
+  background-image: url("../img/travelers_back.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+  // background-size: contain;
+  border-radius: 0 0 20px 20px;
 }
 
 .travelers__wrapper {
+  margin: 25px 0;
   padding: 0 25px;
+}
+
+.travelers__title {
+  margin: 0;
 }
 
 .travelers__list {
@@ -14,8 +25,9 @@
   list-style: none;
 }
 
-.travelers__item {
-  background-color: @basic_white;
+.travelers-item__image {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
 }
 
 .travelers__text {
@@ -28,13 +40,75 @@
   font-weight: 700;
 }
 
-.travelers__flags {
+.travelers-item__content {
+  margin-bottom: 9px;
+  background-color: @basic_white;
+  border-radius: 10px;
+}
+
+.travelers-item__box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.travelers-item__progressbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  margin: 19px;
+  width: 56px;
+  height: 56px;
+  text-align: center;
+  background-color: fade(@basic_black, 60%);
+  // border-color: 2px solid @special_orange;
+  border-radius: 50%;
+  color: @basic_white;
+}
+
+.progressbar__status-number {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.progressbar__status-level {
+  border-top: 1px solid @basic_white;
+}
+
+.flag-list {
   display: flex;
   justify-content: center;
 }
 
-.flags__item {
+.flag-list__item {
+  position: relative;
+  top: -17px;
+  width: 35px;
+  height: 25px;
   padding-right: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.flag-list__item--sri-lanka {
+  background-image: url("../img/sri-lanka-flag.png");
+}
+
+.flag-list__item--thailand {
+  background-image: url("../img/thailand-flag.png");
+}
+
+.flag-list__item--seychelles {
+  background-image: url("../img/seychelles-flag.png");
+}
+
+.flag-list__item--belgium {
+  background-image: url("../img/belgium-flag.png");
+}
+
+.flag-list__item--czech {
+  background-image: url("../img/czech-flag.png");
 }
 
 .link-profile {
@@ -43,17 +117,43 @@
 }
 
 .link-profile__name {
+  font-size: 21px;
+  line-height: 21px;
   font-weight: 700;
   color: @basic_blue;
 }
 
-.item-box__hashtag {
+.link-profile__name::before {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.link-profile__name--offline::before {
+  background-color: @offline;
+}
+
+.link-profile__name--online::before {
+  background-color: @online;
+}
+
+.travelers-item-box {
+  display: flex;
+  justify-items: center;
+}
+
+.travelers-item-box__hashtag {
+  padding: 15px 40px;
   text-align: center;
   line-height: 18px;
   color: @special_grey;
 }
 
-.item-box__list {
+.travelers-item-box__ways {
   display: flex;
   justify-content: center;
   margin: 0;
@@ -61,18 +161,58 @@
   list-style: none;
 }
 
-.travelers__progressbar {
-  margin: 19px;
-  width: 56px;
-  height: 56px;
-  text-align: center;
-  border-color: 4px solid @special_orange;
-  border-radius: 50%;
-  background-color: fade(@basic_black, 30%);
-}
-
-.travelers__to-all {
+.button-to-all {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px auto;
   padding: 1.15em;
   border-radius: 10px;
   text-transform: none;
+}
+
+.button-to-all::after {
+  display: inline;
+  content: "";
+  width: 13px;
+  height: 13px;
+  background-image: url("../img/polygon.svg");
+  background-repeat: no-repeat;
+}
+
+.ways-list__button {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.profile-firsova .ways-button__plane {
+  background-image: url("../img/icon_plane.svg");
+}
+
+.profile-firsova .ways-button__bus {
+  background-image: url("../img/icon_bus_off.svg");
+}
+
+.profile-firsova .ways-button__bycicle {
+  background-image: url("../img/icon_bicycle_off.svg");
+}
+
+.profile-firsova .ways-button__run {
+  background-image: url("../img/icon_run_off.svg");
+}
+
+.profile-demin .ways-button__plane {
+  background-image: url("../img/icon_plane.svg");
+}
+
+.profile-demin .ways-button__bus {
+  background-image: url("../img/icon_bus.svg");
+}
+
+.profile-demin .ways-button__bycicle {
+  background-image: url("../img/icon_bicycle_off.svg");
+}
+
+.profile-demin .ways-button__run {
+  background-image: url("../img/icon_run.svg");
 }
