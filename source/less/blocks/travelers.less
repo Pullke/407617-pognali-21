@@ -26,10 +26,21 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+  }
 }
 
 .travelers-item {
   border-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 25px;
+    width: 285px;
+  }
 }
 
 .travelers-item__image {
@@ -167,16 +178,6 @@
   padding: 0;
   list-style: none;
 }
-
-// .button-to-all {
-//   text-align: left;
-//   padding: 1.15em;
-//   background-image: url("../img/polygon.svg");
-//   background-position: right 22px center;
-//   background-repeat: no-repeat;
-//   border-radius: 10px;
-//   text-transform: none;
-// }
 
 .ways-list__button {
   background-repeat: no-repeat;

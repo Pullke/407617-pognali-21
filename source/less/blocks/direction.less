@@ -4,7 +4,14 @@
   margin-top: -20px;
   padding: 71px 25px 34px;
   background-color: @basic_blue_light;
+  background-image: none;
   border-radius: 0 0 20px 20px;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/flags-back.png");
+    background-repeat: no-repeat;
+    background-position: right top 91px;
+  }
 }
 
 .direction__title {
@@ -14,6 +21,10 @@
 .direction__text {
   padding: 0 25px 60px;
   width: 200px;
+
+  @media (min-width: @tablet-width) {
+    width: 350px;
+  }
 }
 
 .direction__list {
@@ -24,21 +35,48 @@
   list-style: none;
 }
 
+.direction__item {
+  margin-bottom: 10px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    margin-bottom: 1 1px;
+  }
+}
+
 .direction__image {
+  z-index: -1;
+  position: relative;
   border-radius: 10px 10px 0 0;
+
+  @media (min-width: @tablet-width) {
+    order: 1;
+  }
 }
 
 .item-box {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  position: relative;
-  top: -10px;
+  grid-template-areas:
+    "n t"
+    "tl tl";
+  margin-top: -15px;
   padding: 25px 25px;
   background-color: @basic_white;
-  border-radius: 10px 10px;
+  border-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    top: 0;
+    grid-template-areas:
+      "n"
+      "tl"
+      "t";
+    gap: 5px;
+  }
 }
 
 .item-box__name {
+  grid-area: n;
   padding: 0;
   margin: 0;
   font-size: 21px;
@@ -48,23 +86,36 @@
 }
 
 .item-box__travelers {
+  grid-area: t;
   text-align: end;
+  font-weight: 500;
   line-height: 20px;
-  color: @basic_blue;
-  opacity: 0.3;
+  color: fade(@basic_blue, 30%);
+  
+  @media (min-width: @tablet-width) {
+    text-align: start;
+  }
+}
+
+.item-box__travelers::before {
+  display: inline-block;
+  content: "";
+  width: 10px;
+  height: 11px;
+  background-image: url("../img/icon_traveler.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media (min-width: @tablet-width) {
+    width: 18px;
+    height: 20px;
+  }
 }
 
 .item-box__tagline {
+  grid-area: tl;
   margin: 0;
   font-weight: 500;
   line-height: 18px;
-  color: @special_grey;
-  opacity: 0.3;
+  color: fade(@special_grey, 30%);
 }
-
-// .direction__to-all {
-//   padding: 1.15em;
-//   border-radius: 10px;
-//   text-transform: none;
-//   text-align: left;
-// }
