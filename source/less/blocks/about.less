@@ -1,25 +1,51 @@
 .about {
   z-index: 0;
-  padding: 0 50px 82px;
+  margin-top: -25px;
+  padding: 20px 50px 82px;
   background-color: @basic_blue_dark;
   background-image: url("../img/about-mobile.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center bottom;
   border-radius: 0 0 20px 20px;
+
+  @media (min-width: @tablet-width) {
+    background-color: @special_blue;
+    background-image: url("../img/about_tablet.png");
+    background-position: right;
+  }
 }
 
 .about__text {
   width: 220px;
   font-weight: 300;
   color: @basic_white;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+  }
 }
 
 .about__appeal {
   width: 220px;
   font-weight: 700;
   color: @basic_white;
+
+  @media (min-width: @tablet-width) {
+    width: 276px;
+    font-size: 21px;
+    line-height: 25px;
+  }
 }
 
 .direction__image {
   width: 100%;
+}
+
+.about__to-all {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    width: 276px;
+  }
 }

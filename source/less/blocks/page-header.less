@@ -1,6 +1,7 @@
 .main-nav__wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 28px 25px;
 }
 
@@ -41,7 +42,8 @@
 
   @media (min-width: @tablet-width) {
     display: block;
-    margin: 40px;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -79,10 +81,32 @@
 }
 
 .user-list__login {
-  margin-bottom: 51px;
+  // margin-bottom: 51px;
 }
 
 .social-list {
   display: flex;
   justify-content: center;
+}
+
+.main-nav__popup .social-list__popup {
+  background-color: @basic_white;
+}
+
+.social-list__popup--facebook {
+  background-image: url("../img/icon_facebook.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.social-list__popup--vk {
+  background-image: url("../img/icon_vkontakte.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.social-list__popup--instagram {
+  background-image: url("../img/icon_instagram.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
