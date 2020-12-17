@@ -38,6 +38,11 @@
     font-size: 60px;
     line-height: 70px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 127px;
+    text-align: left;
+  }
 }
 
 .intro-list {
@@ -98,6 +103,9 @@
     font-size: 28px;
     line-height: 33px;
   }
+
+  @media (min-width: @desktop-width) {
+  }
 }
 
 .review {
@@ -129,10 +137,14 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     margin-top: -170px;
     font-size: 24px;
     line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
   }
 }
 
@@ -146,6 +158,10 @@
   @media (min-width: @tablet-width) {
     margin-top: 0;
     padding: 31px 33px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 107px;
   }
 }
 
@@ -184,11 +200,19 @@
     height: 140px;
     border-radius: 0 0 10px 10px;
   }
+
+  @media (min-width: @desktop-width) {
+    height: 107px;
+  }
 }
 
 .instruction-list__text {
   display: inline-block;
   width: 150px;
+
+  @media (min-width: @desktop-width) {
+    width: 183px;
+  }
 }
 
 .instruction-list__number {
@@ -201,5 +225,9 @@
     left: 33px;
     font-size: 30px;
     line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
   }
 }
