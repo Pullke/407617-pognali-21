@@ -1,6 +1,7 @@
 .about {
-  z-index: 0;
-  margin-top: -25px;
+  position: relative;
+  z-index: 5;
+  margin-top: -20px;
   padding: 20px 50px 82px;
   background-color: @basic_blue_dark;
   background-image: url("../img/about-mobile.png");
@@ -9,10 +10,19 @@
   border-radius: 0 0 20px 20px;
 
   @media (min-width: @tablet-width) {
+    padding: 45px 0 89px 74px;
     background-color: @special_blue;
-    background-image: url("../img/about_tablet.png");
-    background-position: right;
+    background-image: url("../img/about_tablet.png"), url("../img/about_tablet_rectangle.svg");
+    background-position: right bottom 89px, top;
+    background-repeat: no-repeat;
+    background-size: 384px, 688px;
+    border-radius: 0 0 40px 40px;
   }
+}
+
+.about__title {
+  margin: 0;
+  margin-bottom: 40px;
 }
 
 .about__text {
@@ -22,6 +32,8 @@
 
   @media (min-width: @tablet-width) {
     width: 300px;
+    margin: 0;
+    margin-bottom: 31px;
   }
 
   @media (min-width: @desktop-width) {
@@ -36,6 +48,7 @@
 
   @media (min-width: @tablet-width) {
     width: 276px;
+    margin-bottom: 48px;
     font-size: 21px;
     line-height: 25px;
   }
@@ -54,6 +67,8 @@
 
   @media (min-width: @tablet-width) {
     display: block;
-    width: 276px;
+    width: min-content;
+    margin: 0;
+    padding: 29px 157px 27px 33px;
   }
 }

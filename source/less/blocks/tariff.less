@@ -1,10 +1,23 @@
 .tariff {
-  z-index: 2;
   position: relative;
-  top: -20px;
+  z-index: 2;
+  margin-top: -20px;
   padding: 57px 25px 38px 50px;
   background-color: @basic_blue_light;
   border-radius: 0 0 20px 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -40px;
+    padding: 0;
+    padding-bottom: 85px;
+    border-radius: 0 0 40px 40px;
+  }
+}
+
+.tariff__wrapper {
+  @media (min-width: @tablet-width) {
+    margin: 0 40px;
+  }
 }
 
 .tariff__title {
@@ -15,6 +28,8 @@
 
   @media (min-width: @tablet-width) {
     display: block;
+    margin-bottom: 73px;
+    padding-top: 135px;
     width: 100%;
     text-align: center;
   }
@@ -31,8 +46,8 @@
   background-image: url("../img/rates.svg");
 
   @media (min-width: @tablet-width) {
-    top: 70%;
-    right: 40px;
+    top: 475px;
+    right: 85px;
   }
 }
 
@@ -40,6 +55,10 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 59px;
+  }
 }
 
 .tariff__item {
@@ -49,8 +68,9 @@
   margin-bottom: 32px;
 
   @media (min-width: @tablet-width) {
-    grid-template-columns: 70px 4fr 2fr;
+    grid-template-columns: 90px 1fr 198px;
     grid-template-areas: "n t p";
+    margin-bottom: 0;
   }
 }
 
@@ -81,6 +101,8 @@
   @media (min-width: @tablet-width) {
     grid-area: n;
     justify-self: start;
+    width: 68px;
+    height: 68px;
   }
 }
 
@@ -98,11 +120,48 @@
 
   @media (min-width: @tablet-width) {
     grid-area: p;
+    justify-self: center;
+  }
+}
+
+.tariff__price::after {
+  @media (min-width: @tablet-width) {
+    content: "";
+    z-index: -1;
+    top: 220px;
+    right: 40px;
+    position: absolute;
+    width: 198px;
+    height: 285px;
+    background-color: @basic_gray;
+    border-radius: 20px;
   }
 }
 
 .tariff__link {
   line-height: 16px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 89px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.tariff__link::before {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    bottom: 65px;
+    margin-left: -89px;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background-color: @basic_gray;
+    background-image: url("../img/icon_businessman.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 .tariff-popup {

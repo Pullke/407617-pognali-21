@@ -3,6 +3,8 @@
   font-size: 16px;
   font-family: "Bloggersans", "Arial", sans-serif;
   line-height: 22px;
+  color: @special_grey;
+  background-color: @special_grey_light;
 
   @media (min-width: @tablet-width) {
     font-size: 28px;
@@ -11,14 +13,17 @@
 }
 
 .page__body {
-  min-width: 320px;
+  width: 320px;
   min-height: 100%;
   margin: 0 auto;
   padding: 0;
-  background-color: @basic_blue_dark;
-  color: @special_grey;
 
   @media (min-width: @tablet-width) {
+    width: 768px;
     background-color: @special_blue;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
   }
 }

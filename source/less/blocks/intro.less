@@ -5,19 +5,20 @@
   background-color: @basic_blue_dark;
 
   @media (min-width: @tablet-width) {
+    margin: 0 40px;
     background-color: @special_blue;
   }
 }
 
 .intro_box {
-  padding: 0 25px;
   min-height: 265px;
   background-image: url("../img/traveller-illustration-mobile.svg"), url("../img/globe-back-mobile.jpg");
   background-repeat: no-repeat;
-  background-position: right 50px bottom, center;
+  background-position: right 50px bottom, center bottom -100px;
   background-size: 192px, cover;
 
   @media (min-width: @tablet-width) {
+    margin: 0 -40px;
     min-height: 612px;
     background-image: url("../img/traveller-illustration-mobile.svg"), url("../img/globe-back-tablet.jpg");
     background-repeat: no-repeat;
@@ -30,6 +31,7 @@
 .intro__title {
   width: 240px;
   margin: 0 auto;
+  padding-top: 41px;
   line-height: 40px;
   text-align: center;
 
@@ -91,9 +93,9 @@
 }
 
 .intro__blockquote {
-  position: relative;
+  // position: relative;
   width: 165px;
-  margin: 29px 0;
+  margin: 48px 0 0;
   padding: 0 50px;
 
   @media (min-width: @tablet-width) {
@@ -124,8 +126,9 @@
 }
 
 .instruction-list {
-  position: relative;
-  margin: 90px 25px 0;
+  // position: relative;
+  margin: 99px 25px 0;
+  padding-bottom: 39px;
   font-size: 18px;
   font-weight: 700;
   line-height: 18px;
@@ -134,7 +137,11 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: -170px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: -140px;
+    padding: 0;
+    padding-bottom: 96px;
     font-size: 24px;
     line-height: 24px;
   }
@@ -155,6 +162,7 @@
   @media (min-width: @tablet-width) {
     margin-top: 0;
     padding: 31px 33px 0;
+    height: 109px;
   }
 
   @media (min-width: @desktop-width) {
@@ -194,7 +202,7 @@
   height: 80px;
 
   @media (min-width: @tablet-width) {
-    height: 140px;
+    height: 109px;
     border-radius: 0 0 10px 10px;
   }
 
@@ -207,7 +215,7 @@
   display: inline-block;
   width: 150px;
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     width: 183px;
   }
 }

@@ -1,5 +1,5 @@
 .contacts {
-  margin: 0;
+  margin: -40px 0;
   padding: 0;
 }
 
@@ -9,10 +9,19 @@
   padding: 20px 25px;
   background-color: @basic_blue_dark;
   border-radius: 0 0 20px 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 133px 76px 77px;
+    background-color: @special_blue_light;
+  }
 }
 
 .feedback__title {
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .feedback__text,
@@ -31,11 +40,17 @@
   font-weight: 300;
   text-decoration: underline;
   color: @special_yellow_dark;
+
+  @media (min-width: @tablet-width) {
+    font-size: 28px;
+    line-height: 32px;
+  }
 }
 
 .feedback__form {
   display: grid;
   grid-template-columns: 10fr 1fr;
+  margin-bottom: 60px;
 }
 
 .feedback__email-input {
@@ -54,7 +69,7 @@
 
 .feedback__button {
   position: absolute;
-  right: 25px;
+  right: 76px;
   width: 60px;
   height: 62px;
   border-radius: 10px;
@@ -64,6 +79,15 @@
 
   @media (min-width: @tablet-width) {
     border-radius: 0 10px 10px 0;
+  }
+}
+
+.contacts__text--start,
+.contacts__text--finish {
+  @media (min-width: @tablet-width) {
+    display: inline;
+    margin-bottom: 64px;
+    line-height: 30px;
   }
 }
 

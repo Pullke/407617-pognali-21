@@ -1,12 +1,15 @@
 .direction {
   position: relative;
+  z-index: 4;
   margin-top: -20px;
   padding: 71px 25px 34px;
   background-color: @basic_blue_light;
   background-image: none;
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 40px 40px;
 
   @media (min-width: @tablet-width) {
+    margin-top: -40px;
+    padding: 113px 40px 80px;
     background-image: url("../img/flags-back.png");
     background-repeat: no-repeat;
     background-position: right top 91px;
@@ -14,7 +17,12 @@
 }
 
 .direction__title {
-  padding: 0 25px;
+  margin: 0 25px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 35px;
+    margin-bottom: 57px;
+  }
 }
 
 .direction__text {
@@ -22,6 +30,8 @@
   width: 200px;
 
   @media (min-width: @tablet-width) {
+    margin: 0 35px 104px;
+    padding: 0;
     width: 350px;
   }
 }
@@ -30,8 +40,26 @@
   position: relative;
   margin: 0;
   padding: 0;
-  padding-bottom: 27px;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    row-gap: 11px;
+    margin: 0 35px 46px;
+  }
+}
+
+.direction__list::before {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    top: -38px;
+    left: -35px;
+    width: 141px;
+    height: 141px;
+    background-color: @basic_gray;
+    border-radius: 20px;
+  }
 }
 
 .direction__item {
@@ -40,7 +68,7 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    margin-bottom: 1 1px;
+    margin-bottom: 0;
   }
 }
 
@@ -66,6 +94,8 @@
   border-radius: 10px;
 
   @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 30px 29px 20px;
     top: 0;
     grid-template-areas:
       "n"
@@ -85,6 +115,14 @@
   color: @basic_black;
 }
 
+.item-box__tagline {
+  grid-area: tl;
+  margin: 0;
+  font-weight: 500;
+  line-height: 18px;
+  color: fade(@special_grey, 30%);
+}
+
 .item-box__travelers {
   grid-area: t;
   text-align: end;
@@ -93,6 +131,7 @@
   color: fade(@basic_blue, 30%);
 
   @media (min-width: @tablet-width) {
+    margin-top: 12px;
     text-align: start;
   }
 }
@@ -112,10 +151,6 @@
   }
 }
 
-.item-box__tagline {
-  grid-area: tl;
-  margin: 0;
-  font-weight: 500;
-  line-height: 18px;
-  color: fade(@special_grey, 30%);
+.direction__to-all {
+  margin: 0 35px;
 }
