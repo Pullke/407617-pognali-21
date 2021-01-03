@@ -18,6 +18,10 @@
   border: none;
   outline: none;
   cursor: pointer;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .nav-toggle::before {
@@ -57,11 +61,25 @@
   @media (min-width: @tablet-width) {
     display: none;
   }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
 }
 
 .main-nav__popup {
+  position: absolute;
+  top: 60px;
+  z-index: 10;
+  width: 320px;
+  padding-top: 58px;
+  padding-bottom: 41px;
   display: none;
   background-color: @basic_white;
+
+  @media (min-width: @desktop-width) {
+    // display: block;
+  }
 }
 
 .main-nav__list {
@@ -71,7 +89,7 @@
 }
 
 .site-list {
-  padding: 28px 0 51px;
+  padding-bottom: 51px;
   font-size: 30px;
   font-weight: 500;
   line-height: 35px;
@@ -79,15 +97,37 @@
 }
 
 .user-list {
+  margin-bottom: 41px;
   padding: 0 25px;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
 }
 
+.user-list__login {
+  margin-bottom: 51px;
+}
+
+// .user-list__item::before {
+//   content: "";
+//   position: relative;
+//   width: 45px;
+//   height: 45px;
+//   background-color: @special_blue_dark;
+// }
+
+.contacts__link--mail::before {
+  vertical-align: middle;
+  background-image: url("../img/icon_mail-foo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .social-list {
   display: flex;
   justify-content: center;
+  margin: 0;
+  // margin-bottom: 41px;
 }
 
 .main-nav__popup .social-list__popup {
