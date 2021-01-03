@@ -1,10 +1,14 @@
 .contacts {
-  margin: -40px 0;
+  margin-top: -20px;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -40px;
+  }
 }
 
 .contacts__feedback {
-  z-index: 1;
+  z-index: 2;
   position: relative;
   padding: 20px 25px;
   background-color: @basic_blue_dark;
@@ -13,6 +17,7 @@
   @media (min-width: @tablet-width) {
     padding: 133px 76px 77px;
     background-color: @special_blue_light;
+    border-radius: 0 0 40px 40px;
   }
 }
 
@@ -21,6 +26,7 @@
 
   @media (min-width: @tablet-width) {
     margin: 0;
+    margin-bottom: 59px;
   }
 }
 
@@ -33,6 +39,11 @@
 
 .feedback__text {
   margin-bottom: 29px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    margin-bottom: 65px;
+  }
 }
 
 .feedback__link {
@@ -69,7 +80,7 @@
 
 .feedback__button {
   position: absolute;
-  right: 76px;
+  right: 25px;
   width: 60px;
   height: 62px;
   border-radius: 10px;
@@ -78,6 +89,7 @@
   background-position: center;
 
   @media (min-width: @tablet-width) {
+    right: 76px;
     border-radius: 0 10px 10px 0;
   }
 }
@@ -85,7 +97,8 @@
 .contacts__text--start,
 .contacts__text--finish {
   @media (min-width: @tablet-width) {
-    display: inline;
+    display: inline-block;
+    margin: 0 auto;
     margin-bottom: 64px;
     line-height: 30px;
   }
@@ -97,53 +110,20 @@
 }
 
 .contacts__address {
+  z-index: 1;
   position: relative;
-  top: -40px;
-  padding: 0 25px;
-  padding-bottom: 25px;
+  margin: 0;
+  margin-top: -20px;
+  padding: 63px 25px 35px;
   background-color: @basic_yellow;
   border-radius: 0 0 20px 20px;
-}
 
-.address__text {
-  display: grid;
-  grid-template-columns: 45px 1fr;
-  justify-self: start;
-  padding: 31px 50px 0 10px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: @basic_blue_dark;
-}
-
-.contacts__link::before,
-.address__text::before {
-  display: inline-block;
-  content: "";
-  margin-right: 16px;
-  width: 45px;
-  height: 45px;
-  background-color: @special_blue_dark;
-  border-radius: 50%;
-}
-
-.address__text::before {
-  margin-left: -10px;
-  background-image: url("../img/icon_location.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.contacts__map {
-  z-index: -1;
-  position: relative;
-  top: -50px;
-  margin: 0;
-  padding: 0;
-}
-
-.contacts-map {
-  width: 100%;
-  height: 400px;
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    margin-top: -40px;
+    padding: 102px 76px 84px;
+    border-radius: 0 0 40px 40px;
+  }
 }
 
 .contacts__link--tel::before {
@@ -160,6 +140,58 @@
   background-position: center;
 }
 
+.address__text {
+  margin: 0;
+  margin-left: 61px;
+  padding: 0;
+  padding-bottom: 32px;
+  width: 143px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: @basic_blue_dark;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    margin-left: 94px;
+    padding: 0;
+    padding-bottom: 62px;
+    width: auto;
+  }
+}
+
+.contacts__link::before,
+.address__text::before {
+  display: inline-block;
+  content: "";
+  margin-right: 16px;
+  width: 45px;
+  height: 45px;
+  background-color: @special_blue_dark;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 68px;
+    height: 68px;
+    margin-right: 22px;
+  }
+}
+
+.address__text::before {
+  position: absolute;
+  margin-left: -61px;
+  background-image: url("../img/icon_location.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    margin: 0;
+    margin-top: -20px;
+    margin-left: -94px;
+    padding: 0;
+  }
+}
+
 .address__button {
   text-align: left;
   padding-left: 22px;
@@ -169,4 +201,25 @@
   background-image: url("../img/polygon.svg");
   background-position: right 22px center;
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    border-radius: 20px;
+  }
+}
+
+.contacts__map {
+  z-index: -1;
+  margin: 0;
+  margin-top: -20px;
+  padding: 0;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -40px;
+  }
+}
+
+.contacts-map {
+  width: 100%;
+  height: 400px;
 }

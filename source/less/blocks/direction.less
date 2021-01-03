@@ -1,11 +1,11 @@
 .direction {
   position: relative;
-  z-index: 4;
+  z-index: 5;
   margin-top: -20px;
   padding: 71px 25px 34px;
   background-color: @basic_blue_light;
   background-image: none;
-  border-radius: 0 0 40px 40px;
+  border-radius: 0 0 20px 20px;
 
   @media (min-width: @tablet-width) {
     margin-top: -40px;
@@ -152,5 +152,7 @@
 }
 
 .direction__to-all {
-  margin: 0 35px;
+  @media (min-width: @tablet-width) {
+    margin: 0 35px;
+  }
 }
