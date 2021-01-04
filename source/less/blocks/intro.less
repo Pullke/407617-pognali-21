@@ -8,28 +8,35 @@
     margin: 0 40px;
     background-color: @special_blue;
   }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 58px;
+  }
 }
 
 .intro__box {
   min-height: 426px;
-  background-image: url("../img/traveller-illustration-mobile.svg"), url("../img/globe-back-mobile.jpg");
-  background-repeat: no-repeat;
+  background-image: url("../img/traveller-illustration-mobile.svg"), url("../img/globe-back-mobile.png");
+  background-repeat: no-repeat, no-repeat;
   background-position: right 45px bottom, center top -50px;
   background-size: 192px, cover;
 
   @media (min-width: @tablet-width) {
     margin: 0 -40px;
     min-height: 905px;
-    background-image: url("../img/traveller-illustration-tablet.svg"), url("../img/globe-back-tablet.jpg");
-    background-repeat: no-repeat;
+    background-image: url("../img/traveller-illustration-tablet.svg"), url("../img/globe-back-tablet.svg");
+    background-repeat: no-repeat, no-repeat;
     background-position: bottom 139px right 100px, bottom;
     background-size: auto, auto;
   }
 
   @media (min-width: @desktop-width) {
-    background-image: url("../img/traveller-illustration-desktop.svg"), url("../img/globe-back-desktop.jpg");
-    background-repeat: no-repeat;
-    background-position: bottom, top;
+    margin: 0 -58px;
+    min-height: 648px;
+    background-image: url("../img/traveller-illustration-desktop.svg"), url("../img/globe-back-desktop.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right 405px, bottom;
+    background-size: auto, cover;
   }
 }
 
@@ -49,7 +56,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 0;
+    margin-left: 127px;
+    padding-top: 110px;
     text-align: left;
   }
 }
@@ -108,9 +116,18 @@
   @media (min-width: @tablet-width) {
     position: absolute;
     top: 230px;
-    width: 280px;
+    width: 264px;
     font-size: 28px;
     line-height: 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 0;
+    right: 0;
+    margin: 0;
+    margin-top: 110px;
+    margin-right: 23px;
+    padding: 0;
   }
 }
 
@@ -119,14 +136,17 @@
 }
 
 .review__text {
+  margin-top: 0;
   font-weight: 300;
 }
 
 .review__author {
+  width: 161px;
   font-style: normal;
   font-weight: 700;
 
   @media (min-width: @tablet-width) {
+    width: 251px;
     font-size: 21px;
     line-height: 25px;
   }
@@ -156,6 +176,11 @@
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: repeat(4, auto);
+    z-index: 9;
+    margin: 0;
+    margin-top: -230px;
+    padding: 0;
+    padding-bottom: 123px;
   }
 }
 
@@ -170,10 +195,15 @@
     margin-top: 0;
     padding: 31px 33px 0;
     height: 109px;
+    border-radius: 20px;
   }
 
   @media (min-width: @desktop-width) {
+    display: flex;
+    margin: 0;
     height: 107px;
+    box-sizing: border-box;
+    border-radius: 20px;
   }
 }
 
@@ -183,7 +213,12 @@
   @media (min-width: @tablet-width) {
     position: relative;
     width: 110%;
-    border-radius: 10px 0 0 0;
+    border-radius: 20px 0 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 345px;
+    border-radius: 20px 0 0 20px;
   }
 }
 
@@ -191,7 +226,13 @@
   background-color: @basic_orange;
 
   @media (min-width: @tablet-width) {
-    border-radius: 10px 10px 0 0;
+    border-radius: 20px 20px 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -20px;
+    width: 345px;
+    border-radius: 20px 0 0 20px;
   }
 }
 
@@ -200,7 +241,13 @@
 
   @media (min-width: @tablet-width) {
     width: 110%;
-    border-radius: 0 0 0 10px;
+    border-radius: 0 0 0 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 345px;
+    margin-left: -20px;
+    border-radius: 20px 0 0 20px;
   }
 }
 
@@ -210,11 +257,14 @@
 
   @media (min-width: @tablet-width) {
     height: 109px;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 20px 20px;
   }
 
   @media (min-width: @desktop-width) {
+    width: 345px;
     height: 107px;
+    margin-left: -20px;
+    border-radius: 20px;
   }
 }
 
@@ -240,6 +290,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    position: relative;
+    left: 281px;
+    bottom: 50px;
   }
 }
