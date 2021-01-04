@@ -10,20 +10,26 @@
   }
 }
 
-.intro_box {
-  min-height: 265px;
+.intro__box {
+  min-height: 426px;
   background-image: url("../img/traveller-illustration-mobile.svg"), url("../img/globe-back-mobile.jpg");
   background-repeat: no-repeat;
-  background-position: right 50px bottom, center bottom -100px;
+  background-position: right 45px bottom, center top -50px;
   background-size: 192px, cover;
 
   @media (min-width: @tablet-width) {
     margin: 0 -40px;
-    min-height: 612px;
+    min-height: 905px;
     background-image: url("../img/traveller-illustration-tablet.svg"), url("../img/globe-back-tablet.jpg");
     background-repeat: no-repeat;
-    background-position: top 21px right 100px, center;
-    background-size: 372px, cover;
+    background-position: bottom 139px right 100px, bottom;
+    background-size: auto, auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/traveller-illustration-desktop.svg"), url("../img/globe-back-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom, top;
   }
 }
 
@@ -37,12 +43,13 @@
 
   @media (min-width: @tablet-width) {
     width: 400px;
+    padding-top: 32px;
     font-size: 60px;
     line-height: 70px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 127px;
+    margin-left: 0;
     text-align: left;
   }
 }
@@ -95,7 +102,7 @@
 .intro__blockquote {
   // position: relative;
   width: 165px;
-  margin: 48px 0 0;
+  margin: 86px 0 0;
   padding: 0 50px;
 
   @media (min-width: @tablet-width) {
